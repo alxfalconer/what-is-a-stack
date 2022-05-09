@@ -9,6 +9,11 @@ class Stack {
   // add item to top of stack if not full
   // if full throw error
   push(item) {
+    if (!this.isFull()) {
+      this.stack.push(item);
+    } else {
+      throw new Error('Stack is full!');
+    }
 
   }
 
