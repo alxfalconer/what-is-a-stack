@@ -47,8 +47,14 @@ class Stack {
   // return -1 if item not in stack, otherwise integer representing 
   // how far it is from the top
   search(target) {
+    for (let i = -1; i >= -this.size(); --i) {
+      if (this.stack[this.size() + i] === target) {
+        return Math.abs(i) - 1;
+      }
 
   }
+  return -1;
+}
 
   // print contents of stack: do not return the stack itself!
   print() {
