@@ -19,26 +19,28 @@ class Stack {
 
   // remove item from top of stack and return it
   pop() {
-
+    return this.stack.pop();
   }
 
   // return item at top of stack without removing it
   peek() {
-
+    return this.stack.pop();
   }
 
   // return true if stack is empty, otherwise false
   isEmpty() {
+    return this.size() === 0;
 
   }
 
   // return true if stack is full, otherwise false
   isFull() {
-
+    return this.size() === this.limit;
   }
 
   // return number of items in stack
   size() {
+    return this.stack.length;
 
   }
 
