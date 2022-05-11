@@ -72,6 +72,18 @@ if (require.main === module) {
   console.log('is full?', stack.isFull());
   console.log('find 5', stack.search(5));
   console.log('peek while empty', stack.peek());
+
+  for (let i = 0; i < 5; ++i) {
+    stack.push(i);
+  }
+
+  console.log('ADD ITEMS 0 TO 4');
+  console.log('size', stack.size());
+  console.log('is empty?', stack.isEmpty());
+  console.log('is full?', stack.isFull());
+  console.log('find 3', stack.search(3));
+  console.log('peek', stack.peek());
+  stack.print();
 }
 
 module.exports = Stack;
