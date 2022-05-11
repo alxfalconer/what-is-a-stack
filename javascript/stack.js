@@ -58,12 +58,20 @@ class Stack {
 
   // print contents of stack: do not return the stack itself!
   print() {
+    console.log(this.stack.join(' <- '));
     
   }
 }
 
 if (require.main === module) {
   // add your own tests in here
+  const stack = new Stack();
+
+  console.log('size', stack.size());
+  console.log('is empty?', stack.isEmpty());
+  console.log('is full?', stack.isFull());
+  console.log('find 5', stack.search(5));
+  console.log('peek while empty', stack.peek());
 }
 
 module.exports = Stack;
