@@ -86,4 +86,33 @@ if (require.main === module) {
   stack.print();
 }
 
+for (let i = 5; i < 10; ++i) {
+  stack.push(i);
+}
+
+console.log('ADD ITEMS 5 TO 9');
+console.log('size', stack.size());
+console.log('is empty?', stack.isEmpty());
+console.log('is full?', stack.isFull());
+console.log('find 3', stack.search(3));
+console.log('peek', stack.peek());
+stack.print();
+
+console.log('pop', stack.pop());
+console.log('size', stack.size());
+console.log('is empty?', stack.isEmpty());
+console.log('is full?', stack.isFull());
+console.log('peek', stack.peek());
+stack.print();
+
+console.log('GENERATE ERROR');
+stack.push(9);
+
+try {
+  stack.push(10);
+} catch(err) {
+  console.log(err);
+  stack.print();
+}
+
 module.exports = Stack;
